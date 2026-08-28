@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dreamz-ivory: #f7f3ee;
+  --color-dreamz-cream: #efe7dd;
+  --color-dreamz-charcoal: #2f2a28;
+  --color-dreamz-burgundy: #6d1f2f;
+  --color-dreamz-burgundy-dark: #4f1722;
+  --color-dreamz-gold: #b89b6a;
+  --color-dreamz-muted: #7b706b;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: var(--color-dreamz-charcoal);
+  background: var(--color-dreamz-ivory);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: clip;
+  background: var(--color-dreamz-ivory);
+  color: var(--color-dreamz-charcoal);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-dreamz-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-dreamz-burgundy);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (hover: none) {
+  .group:hover,
+  button:hover,
+  a:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

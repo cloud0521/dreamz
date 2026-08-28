@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DhjxDb_a.js";var t=e();function n({children:e,className:n=``}){return(0,t.jsx)(`div`,{className:`mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 ${n}`,children:e})}export{n as t};
