@@ -45,11 +45,11 @@ export const meta: MetaFunction = () => {
     },
     {
       property: 'og:url',
-      content: 'https://dreamzinvitations.com/pricing',
+      content: 'https://dreamz-lime.vercel.app/pricing',
     },
     {
       property: 'og:image',
-      content: 'https://dreamzinvitations.com/og-dreamz.jpg',
+      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
     },
     {
       property: 'og:image:alt',
@@ -70,7 +70,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: 'twitter:image',
-      content: 'https://dreamzinvitations.com/og-dreamz.jpg',
+      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
     },
   ]
 }
@@ -78,7 +78,7 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => [
   {
     rel: 'canonical',
-    href: 'https://dreamzinvitations.com/pricing',
+    href: 'https://dreamz-lime.vercel.app/pricing',
   },
 ]
 

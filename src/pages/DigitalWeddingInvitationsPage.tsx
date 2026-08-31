@@ -30,11 +30,11 @@ export const meta: MetaFunction = () => {
     },
     {
       property: 'og:url',
-      content: 'https://dreamzinvitations.com/digital-wedding-invitations',
+      content: 'https://dreamz-lime.vercel.app/digital-wedding-invitations',
     },
     {
       property: 'og:image',
-      content: 'https://dreamzinvitations.com/og-dreamz.jpg',
+      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
     },
     {
       property: 'og:image:alt',
@@ -55,7 +55,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: 'twitter:image',
-      content: 'https://dreamzinvitations.com/og-dreamz.jpg',
+      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
     },
   ]
 }
@@ -63,7 +63,7 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => [
   {
     rel: 'canonical',
-    href: 'https://dreamzinvitations.com/digital-wedding-invitations',
+    href: 'https://dreamz-lime.vercel.app/digital-wedding-invitations',
   },
 ]
 
