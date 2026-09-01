@@ -67,8 +67,16 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-black/5 pt-6 text-sm text-dreamz-muted">
-          © {new Date().getFullYear()} DreamZ. All rights reserved.
+        <div className="mt-10 flex flex-col gap-4 border-t border-black/5 pt-6 text-sm text-dreamz-muted lg:flex-row lg:items-center lg:justify-between">
+          <p>© {new Date().getFullYear()} DreamZ. All rights reserved.</p>
+          <nav aria-label="Legal and business information">
+            <div className="flex flex-wrap gap-x-5 gap-y-3">
+              <Link to="/terms" className="hover:text-dreamz-burgundy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">Terms of Service</Link>
+              <Link to="/refund-policy" className="hover:text-dreamz-burgundy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">Refund &amp; Cancellation</Link>
+              <Link to="/privacy" className="hover:text-dreamz-burgundy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">Privacy Policy</Link>
+              <Link to="/contact" className="hover:text-dreamz-burgundy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">Contact</Link>
+            </div>
+          </nav>
         </div>
       </Container>
     </footer>

@@ -41,4 +41,16 @@
     <loc>https://dreamz-lime.vercel.app/contact</loc>
   </url>
 
+  <url>
+    <loc>https://dreamz-lime.vercel.app/terms</loc>
+  </url>
+
+  <url>
+    <loc>https://dreamz-lime.vercel.app/refund-policy</loc>
+  </url>
+
+  <url>
+    <loc>https://dreamz-lime.vercel.app/privacy</loc>
+  </url>
+
 </urlset>

@@ -1,0 +1,1 @@
+var e={tradeName:`DreamZ`,legalName:null,address:null,phone:`0930 354 0192`,email:`cloud000argando28@gmail.com`,businessHours:`Daily, 8:00 AM–8:00 PM`,messengerUrl:`https://m.me/dreamzinvitationsph`,messengerLabel:`DreamZ on Messenger`};export{e as t};

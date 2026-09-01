@@ -26,11 +26,21 @@ function Navbar() {
         <div className="flex h-16 items-center justify-between sm:h-20">
           <Link
             to="/"
-            className="font-display text-3xl font-semibold tracking-wide text-dreamz-burgundy"
+            className="group inline-flex shrink-0 flex-col text-dreamz-burgundy transition-colors duration-300 hover:text-dreamz-burgundy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dreamz-gold/60 focus-visible:ring-offset-4 focus-visible:ring-offset-dreamz-ivory"
             aria-label="DreamZ home"
             onClick={() => setMenuOpen(false)}
           >
-            DreamZ
+            <span className="font-display text-[1.75rem] font-medium leading-[0.8] tracking-[0.01em] sm:text-[1.875rem]">
+              <span className="text-[1.08em]">D</span>ream
+              <span className="relative inline-block translate-y-px text-[1.08em] italic">Z</span>
+            </span>
+            <span className="mt-1 hidden items-center gap-1.5 whitespace-nowrap text-[0.5rem] font-medium leading-none tracking-[0.2em] text-dreamz-gold/80 transition-colors duration-300 group-hover:text-dreamz-gold min-[390px]:flex sm:text-[0.525rem] sm:tracking-[0.23em]">
+              <span
+                aria-hidden="true"
+                className="h-1 w-1 shrink-0 rotate-45 border border-current"
+              />
+              DIGITAL WEDDING EXPERIENCES
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex">

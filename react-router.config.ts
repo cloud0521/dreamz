@@ -15,5 +15,8 @@ export default {
     '/pricing',
     '/faq',
     '/contact',
+    '/terms',
+    '/refund-policy',
+    '/privacy',
   ],
 } satisfies Config

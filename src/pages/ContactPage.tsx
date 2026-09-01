@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import Container from '../components/Container'
 import { invitationDesigns } from '../data/designs'
+import { businessInfo } from '../config/business'
 import type { LinksFunction, MetaFunction } from 'react-router'
 
 export const meta: MetaFunction = () => {
   return [
     {
-      title: 'Get a Free Wedding Invitation Preview | DreamZ',
+      title: 'Contact DreamZ | Free Wedding Invitation Preview',
     },
     {
       name: 'description',
@@ -17,7 +18,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: 'og:title',
-      content: 'Get a Free Wedding Invitation Preview | DreamZ',
+      content: 'Contact DreamZ | Free Wedding Invitation Preview',
     },
     {
       property: 'og:description',
@@ -50,7 +51,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: 'twitter:title',
-      content: 'Get a Free Wedding Invitation Preview | DreamZ',
+      content: 'Contact DreamZ | Free Wedding Invitation Preview',
     },
     {
       name: 'twitter:description',
@@ -245,8 +246,31 @@ function ContactPage() {
                   Your details will be copied automatically. When Messenger opens,
                   simply paste them into the conversation and send your prenup photo.
                 </p>
+                <p className="mt-3 text-xs leading-5 text-dreamz-muted">
+                  By continuing, you choose to share these details through Messenger.
+                  See our{' '}
+                  <Link to="/privacy" className="underline underline-offset-2 hover:text-dreamz-burgundy">
+                    Privacy Policy
+                  </Link>
+                  .
+                </p>
               </div>
             </div>
+
+            <section className="mt-16 border-t border-black/10 pt-12 sm:mt-20 sm:pt-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-dreamz-burgundy">Business Information</p>
+              <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-dreamz-charcoal sm:text-5xl">Contact DreamZ</h2>
+              <p className="mt-5 max-w-2xl leading-8 text-dreamz-muted">Preview requests, customer support, and complaints are currently handled through the official DreamZ Messenger conversation.</p>
+              <dl className="mt-8 divide-y divide-black/10 border-y border-black/10">
+                <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Trade name</dt><dd className="text-dreamz-muted">{businessInfo.tradeName}</dd></div>
+                <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Messenger</dt><dd><a href={businessInfo.messengerUrl} target="_blank" rel="noreferrer" className="text-dreamz-burgundy underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">{businessInfo.messengerLabel}</a></dd></div>
+                <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Email</dt><dd>{businessInfo.email ? <a href={`mailto:${businessInfo.email}`} className="text-dreamz-burgundy underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">{businessInfo.email}</a> : <span className="text-dreamz-muted">Not yet provided</span>}</dd></div>
+                <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Phone</dt><dd>{businessInfo.phone ? <a href={`tel:${businessInfo.phone.replace(/\s/g, '')}`} className="text-dreamz-burgundy underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy">{businessInfo.phone}</a> : <span className="text-dreamz-muted">Not yet provided</span>}</dd></div>
+                <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Business address</dt><dd className="text-dreamz-muted">{businessInfo.address ?? 'Not yet provided'}</dd></div>
+                {businessInfo.businessHours && <div className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt className="font-semibold text-dreamz-charcoal">Business hours</dt><dd className="text-dreamz-muted">{businessInfo.businessHours}</dd></div>}
+              </dl>
+              <p className="mt-5 text-sm leading-6 text-dreamz-muted">A verified business address will be published here once it is supplied.</p>
+            </section>
           </div>
         </Container>
       </main>

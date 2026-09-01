@@ -37,6 +37,15 @@ type Pages = {
   "/contact": {
     params: {};
   };
+  "/terms": {
+    params: {};
+  };
+  "/refund-policy": {
+    params: {};
+  };
+  "/privacy": {
+    params: {};
+  };
   "/*": {
     params: {
       "*": string;
@@ -47,11 +56,11 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/designs" | "/designs/:slug" | "/digital-wedding-invitations" | "/wedding-rsvp" | "/pricing" | "/faq" | "/contact" | "/*";
+    page: "/" | "/designs" | "/designs/:slug" | "/digital-wedding-invitations" | "/wedding-rsvp" | "/pricing" | "/faq" | "/contact" | "/terms" | "/refund-policy" | "/privacy" | "/*";
   };
   "layouts/RootLayout.tsx": {
     id: "layouts/RootLayout";
-    page: "/" | "/designs" | "/designs/:slug" | "/digital-wedding-invitations" | "/wedding-rsvp" | "/pricing" | "/faq" | "/contact" | "/*";
+    page: "/" | "/designs" | "/designs/:slug" | "/digital-wedding-invitations" | "/wedding-rsvp" | "/pricing" | "/faq" | "/contact" | "/terms" | "/refund-policy" | "/privacy" | "/*";
   };
   "pages/HomePage.tsx": {
     id: "pages/HomePage";
@@ -85,6 +94,18 @@ type RouteFiles = {
     id: "pages/ContactPage";
     page: "/contact";
   };
+  "pages/TermsPage.tsx": {
+    id: "pages/TermsPage";
+    page: "/terms";
+  };
+  "pages/RefundPolicyPage.tsx": {
+    id: "pages/RefundPolicyPage";
+    page: "/refund-policy";
+  };
+  "pages/PrivacyPage.tsx": {
+    id: "pages/PrivacyPage";
+    page: "/privacy";
+  };
   "pages/NotFoundPage.tsx": {
     id: "pages/NotFoundPage";
     page: "/*";
@@ -102,5 +123,8 @@ type RouteModules = {
   "pages/PricingPage": typeof import("./src/pages/PricingPage.tsx");
   "pages/FAQPage": typeof import("./src/pages/FAQPage.tsx");
   "pages/ContactPage": typeof import("./src/pages/ContactPage.tsx");
+  "pages/TermsPage": typeof import("./src/pages/TermsPage.tsx");
+  "pages/RefundPolicyPage": typeof import("./src/pages/RefundPolicyPage.tsx");
+  "pages/PrivacyPage": typeof import("./src/pages/PrivacyPage.tsx");
   "pages/NotFoundPage": typeof import("./src/pages/NotFoundPage.tsx");
 };

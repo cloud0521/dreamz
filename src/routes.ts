@@ -25,6 +25,9 @@ export default [
     route('pricing', 'pages/PricingPage.tsx'),
     route('faq', 'pages/FAQPage.tsx'),
     route('contact', 'pages/ContactPage.tsx'),
+    route('terms', 'pages/TermsPage.tsx'),
+    route('refund-policy', 'pages/RefundPolicyPage.tsx'),
+    route('privacy', 'pages/PrivacyPage.tsx'),
 
     route('*', 'pages/NotFoundPage.tsx'),
   ]),

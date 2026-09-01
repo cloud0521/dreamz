@@ -173,6 +173,8 @@ function DesignDetailPage() {
                       title={`${design.name} interactive wedding invitation demo`}
                       loading="eager"
                       allow="autoplay; fullscreen"
+                      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"
+                      referrerPolicy="no-referrer"
                       className="-ml-2.5 h-[70svh] min-h-[32rem] w-[calc(100%+1.25rem)] rounded-[1.4rem] bg-black sm:h-[42rem] sm:rounded-[1.8rem]"
                     />
                   </div>
