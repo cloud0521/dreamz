@@ -57,7 +57,7 @@ export const meta: MetaFunction = ({ params }) => {
     descriptions[params.slug ?? ''] ??
     'Explore an elegant digital wedding invitation design by DreamZ.'
 
-  const url = `https://dreamz-lime.vercel.app/designs/${params.slug}`
+  const url = `https://dreamzinvites.asia/designs/${params.slug}`
 
   return [
     { title },
@@ -84,7 +84,7 @@ export const meta: MetaFunction = ({ params }) => {
     {
       tagName: 'link',
       rel: 'canonical',
-      href: `https://dreamz-lime.vercel.app/designs/${params.slug}`,
+      href: `https://dreamzinvites.asia/designs/${params.slug}`,
     },
     {
       property: 'og:url',
@@ -92,7 +92,7 @@ export const meta: MetaFunction = ({ params }) => {
     },
     {
       property: 'og:image',
-      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
+      content: 'https://dreamzinvites.asia/og-dreamz.jpg',
     },
     {
       property: 'og:image:alt',
@@ -112,7 +112,7 @@ export const meta: MetaFunction = ({ params }) => {
     },
     {
       name: 'twitter:image',
-      content: 'https://dreamz-lime.vercel.app/og-dreamz.jpg',
+      content: 'https://dreamzinvites.asia/og-dreamz.jpg',
     },
   ]
 }

@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => [
   { name: 'description', content: 'How DreamZ handles information used to create, publish, and support personalized digital wedding invitations.' },
 ]
 
-export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://dreamz-lime.vercel.app/privacy' }]
+export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://dreamzinvites.asia/privacy' }]
 
 function PrivacyPage() {
   return (
