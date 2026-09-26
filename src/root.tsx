@@ -7,6 +7,16 @@ import {
 } from 'react-router'
 
 import './index.css'
+// app/root.tsx (or src/root.tsx)
+import type { LinksFunction } from 'react-router'
+
+export const links: LinksFunction = () => [
+  {
+    rel: 'icon',
+    type: 'image/png',
+    href: '/dreamz.png',
+  },
+]
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
