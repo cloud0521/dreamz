@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => [
   { name: 'description', content: 'Terms governing DreamZ personalized digital wedding invitation services.' },
 ]
 
-export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://dreamzinvites.asia/terms' }]
+export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://www.dreamzinvites.asia/terms' }]
 
 const legalLinkClass = 'font-medium text-dreamz-burgundy underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy'
 

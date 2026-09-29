@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => [
   { name: 'description', content: 'How cancellations, service concerns, and refunds are handled for DreamZ personalized digital wedding invitations.' },
 ]
 
-export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://dreamzinvites.asia/refund-policy' }]
+export const links: LinksFunction = () => [{ rel: 'canonical', href: 'https://www.dreamzinvites.asia/refund-policy' }]
 
 const legalLinkClass = 'font-medium text-dreamz-burgundy underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dreamz-burgundy'
 

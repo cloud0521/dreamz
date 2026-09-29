@@ -31,11 +31,11 @@ export const meta: MetaFunction = () => {
     },
     {
       property: 'og:url',
-      content: 'https://dreamzinvites.asia/wedding-rsvp',
+      content: 'https://www.dreamzinvites.asia/wedding-rsvp',
     },
     {
       property: 'og:image',
-      content: 'https://dreamzinvites.asia/og-dreamz.jpg',
+      content: 'https://www.dreamzinvites.asia/og-dreamz.jpg',
     },
     {
       property: 'og:image:alt',
@@ -56,7 +56,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: 'twitter:image',
-      content: 'https://dreamzinvites.asia/og-dreamz.jpg',
+      content: 'https://www.dreamzinvites.asia/og-dreamz.jpg',
     },  
   ]
 }
@@ -64,7 +64,7 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => [
   {
     rel: 'canonical',
-    href: 'https://dreamzinvites.asia/wedding-rsvp',
+    href: 'https://www.dreamzinvites.asia/wedding-rsvp',
   },
 ]
 
