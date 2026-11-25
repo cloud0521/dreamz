@@ -1,78 +1,17 @@
 import { CalendarDays, Images, MapPin, Music2, Smartphone, Users } from 'lucide-react'
 import Container from '../components/Container'
-import SectionHeading from '../components/SectionHeading'
 
 const benefits = [
-  {
-    icon: Users,
-    title: 'RSVP Tracking',
-    description:
-      'Keep guest responses organized in one place so you can manage attendance more easily.',
-  },
-  {
-    icon: CalendarDays,
-    title: 'Live Wedding Countdown',
-    description:
-      'Build excitement with a live countdown leading up to your special day.',
-  },
-  {
-    icon: Images,
-    title: 'Photo & Prenup Gallery',
-    description:
-      'Turn your favorite prenup photos into part of the wedding experience.',
-  },
-  {
-    icon: Music2,
-    title: 'Background Music',
-    description:
-      'Set the mood with a meaningful song that plays throughout the invitation.',
-  },
-  {
-    icon: MapPin,
-    title: 'Google Maps Integration',
-    description:
-      'Help guests find the ceremony and reception locations without searching manually.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile-Friendly',
-    description:
-      'Designed to feel beautiful and easy to use on the phones your guests already have.',
-  },
+  { icon: Users, title: 'A thoughtful RSVP', description: 'Keep every guest response together and easy to find.' },
+  { icon: CalendarDays, title: 'The days, counted', description: 'Let anticipation build with a live wedding countdown.' },
+  { icon: Images, title: 'Your favorite frames', description: 'Bring your prenup photographs into the story.' },
+  { icon: Music2, title: 'A song that means something', description: 'Set the tone with music chosen by you.' },
+  { icon: MapPin, title: 'Everywhere they need to be', description: 'Share ceremony and reception details with map links.' },
+  { icon: Smartphone, title: 'Made for their phones', description: 'A comfortable, polished experience on any screen.' },
 ]
 
 function BenefitsSection() {
-  return (
-    <section className="bg-white/40 py-20 sm:py-24">
-      <Container>
-        <SectionHeading
-          eyebrow="More Than an Invitation"
-          title="Everything Your Guests Need, Beautifully Presented."
-          description="DreamZ combines the details of your wedding with an interactive experience that is simple for guests and easier for couples to manage."
-        />
-
-        <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {benefits.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="flex gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-dreamz-cream text-dreamz-burgundy">
-                <Icon size={20} strokeWidth={1.7} />
-              </div>
-
-              <div>
-                <h3 className="font-display text-2xl font-medium text-dreamz-charcoal">
-                  {title}
-                </h3>
-
-                <p className="mt-2 leading-7 text-dreamz-muted">
-                  {description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
+  return <section className="benefits-section"><Container><div className="benefits-heading"><p className="eyebrow">Every detail, in its place</p><h2>The practical things,<br /><em>beautifully remembered.</em></h2><p>Everything your guests need to feel close to the day and ready to celebrate.</p></div><div className="benefits-list">{benefits.map(({ icon: Icon, title, description }, index) => <article key={title}><span className="benefit-number">0{index + 1}</span><Icon size={20} strokeWidth={1.5} aria-hidden="true" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></Container></section>
 }
 
 export default BenefitsSection

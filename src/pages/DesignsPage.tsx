@@ -84,9 +84,9 @@ function DesignsPage() {
             description="Explore our growing collection of elegant digital wedding experiences, each designed with a distinct mood and personality."
           />
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {invitationDesigns.map((design) => (
-              <DesignCard key={design.id} design={design} />
+          <div className="design-grid">
+            {invitationDesigns.map((design, index) => (
+              <DesignCard key={design.id} design={design} index={index} />
             ))}
           </div>
         </Container>

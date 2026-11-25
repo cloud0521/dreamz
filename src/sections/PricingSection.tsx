@@ -18,7 +18,7 @@ const inclusions = [
 
 function PricingSection() {
   return (
-    <section id="pricing" className="bg-white/40 py-20 sm:py-24">
+    <section id="pricing" className="pricing-section">
       <Container>
         <SectionHeading
           eyebrow="Simple Pricing"
@@ -26,7 +26,7 @@ function PricingSection() {
           description="Start with everything you need for a beautiful digital wedding invitation."
         />
 
-        <div className="mx-auto mt-14 max-w-3xl">
+        <div className="pricing-card mx-auto mt-14 max-w-3xl">
           <div className="rounded-4xl border border-black/5 bg-white p-7 shadow-sm sm:p-10">
             <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-dreamz-burgundy">
