@@ -1,6 +1,5 @@
 import type { LinksFunction, MetaFunction } from 'react-router'
 import Container from '../components/Container'
-import SectionHeading from '../components/SectionHeading'
 import DesignCard from '../components/DesignCard'
 import { invitationDesigns } from '../data/designs'
 
@@ -76,17 +75,16 @@ function DesignsPage() {
     <>
     
 
-      <main className="py-12 sm:py-20 lg:py-24">
+      <main className="collection-page">
         <Container>
-          <SectionHeading
-            eyebrow="DreamZ Collection"
-            title="Find an Invitation That Feels Like You."
-            description="Explore our growing collection of elegant digital wedding experiences, each designed with a distinct mood and personality."
-          />
-
+          <div className="collection-page-heading">
+            <p className="eyebrow">DreamZ collection</p>
+            <h1>Find your perfect invitation.</h1>
+            <p>Beautiful designs for your unforgettable day.</p>
+          </div>
           <div className="design-grid">
-            {invitationDesigns.map((design, index) => (
-              <DesignCard key={design.id} design={design} index={index} />
+            {invitationDesigns.map((design) => (
+              <DesignCard key={design.id} design={design} />
             ))}
           </div>
         </Container>

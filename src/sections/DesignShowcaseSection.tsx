@@ -8,15 +8,15 @@ function DesignShowcaseSection() {
   return (
     <section id="designs" className="collection-section">
       <Container>
-        <div className="section-intro-row">
-          <div><p className="eyebrow">The DreamZ collection</p><h2>Find the feeling<br /><em>that feels like you.</em></h2></div>
-          <p>Each invitation begins with a distinct mood. Choose a design to explore the details, motion, and story inside.</p>
+        <div className="section-intro-row collection-heading">
+          <div><p className="eyebrow">The DreamZ collection</p><h2>Find your perfect invitation.</h2></div>
+          <p>Beautiful designs for your unforgettable day.</p>
           <Link to="/designs" className="text-link collection-all">View all designs <ArrowRight size={15} /></Link>
         </div>
         <div className="design-grid">
-          {invitationDesigns.map((design, index) => <DesignCard key={design.id} design={design} index={index} />)}
+          {invitationDesigns.map((design) => <DesignCard key={design.id} design={design} />)}
         </div>
-        <div className="collection-mobile-link"><Link to="/designs" className="text-link">Explore the full collection <ArrowRight size={15} /></Link></div>
+        <div className="collection-mobile-link"><Link to="/designs" className="text-link">View all designs <ArrowRight size={15} /></Link></div>
       </Container>
     </section>
   )

@@ -1,18 +1,44 @@
 import { ArrowUpRight } from 'lucide-react'
-import type { InvitationDesign } from '../types/design'
 import { Link } from 'react-router'
+import type { InvitationDesign } from '../types/design'
 
-type DesignCardProps = { design: InvitationDesign; index?: number }
+type DesignCardProps = { design: InvitationDesign }
 
-function DesignCard({ design, index = 0 }: DesignCardProps) {
+function DesignCard({ design }: DesignCardProps) {
   return (
-    <article className="design-card group">
-      <Link to={`/designs/${design.slug}`} className="design-image" aria-label={`Explore ${design.name} wedding invitation design`}>
-        {design.previewImage ? <img src={design.previewImage} alt={`${design.name} digital wedding invitation preview`} loading="lazy" decoding="async" /> : <div className="design-placeholder"><span>{design.theme}</span><strong>{design.name}</strong><i>DreamZ invitation</i></div>}
-        <span className="design-index">0{index + 1}</span>
-        <span className="design-open" aria-hidden="true"><ArrowUpRight size={19} /></span>
+    <article className="design-card">
+      <Link
+        to={`/designs/${design.slug}`}
+        className="design-card-link"
+        aria-label={`View ${design.name}: ${design.shortDescription}`}
+      >
+        <span className="design-image">
+          {design.previewImage ? (
+            <img
+              src={design.previewImage}
+              alt={`${design.name} digital wedding invitation preview`}
+              loading="lazy"
+              decoding="async"
+              width="423"
+              height="833"
+            />
+          ) : (
+            <span className="design-placeholder" aria-hidden="true">
+              <span>{design.name}</span>
+              <i>DreamZ invitation</i>
+            </span>
+          )}
+        </span>
+        <span className="design-meta">
+          <span className="design-copy">
+            <span className="design-name">{design.name}</span>
+            <span className="design-description">{design.shortDescription}</span>
+          </span>
+          <span className="design-link">
+            View design <ArrowUpRight size={15} aria-hidden="true" />
+          </span>
+        </span>
       </Link>
-      <div className="design-meta"><div><p className="eyebrow">{design.theme}</p><h3>{design.name}</h3><p>{design.shortDescription}</p></div><Link to={`/designs/${design.slug}`} className="design-link">Discover <ArrowUpRight size={15} /></Link></div>
     </article>
   )
 }

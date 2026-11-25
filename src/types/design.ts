@@ -6,7 +6,22 @@ export type InvitationDesign = {
   description: string
   theme: string
   previewImage: string
+  galleryImages: DesignGalleryImage[]
+  palette?: DesignColor[]
   liveDemoUrl: string
   seoTitle: string
   seoDescription: string
+}
+
+export type DesignGalleryImage = {
+  src: string
+  alt: string
+  label: string
+  width: number
+  height: number
+}
+
+export type DesignColor = {
+  name: string
+  value: string
 }
